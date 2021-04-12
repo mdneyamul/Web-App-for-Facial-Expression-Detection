@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+      if (window.location.protocol !== "https:")
+          window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+  </script>
+    <meta charset="utf-8">
+    <base href="https://ctrlq.org/assets/v/" />
+    <title>Free Image Hosting - Upload Pictures Without Sign-up</title>
+    <meta name="description" content="Easily upload and host your images on the Internet, forever. You do not need to register an account and there are no hosting bandwidth limitations either." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://ctrlq.org/google/">
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" /> -->
+    <link href="css/theme-nearblack.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
+    <style>
+      .loading-modal {
+      background-color: rgba( 255, 255, 255, .8);
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+
+  .loading-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -16px 0 0 -16px
+  }
+
+  body.busy .loading-modal {
+      display: block;
+  }
+</style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3152670624293746",
+            enable_page_level_ads: true
+        });
+    </script>
+</head>
+
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="nav-bar">
+                <div class="module left">
+                    <a href="/">
+                        <img class="logo logo-dark" alt="CTRLQ logo" src="../img/ctrlq.logo.black.png">
+                    </a>
+                </div>
+                <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                    <i class="ti-menu"></i>
+                </div>
+                <div class="module-group right">
+                    <div class="module left">
+                        <ul class="menu">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/labnol">Twitter</a>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#">
+		                                Tools
+		                            </a>
+                                <ul class="mega-menu">
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <span class="title">Google Add-ons</span>
+                                            </li>
+                                            <li>
+                                                <a href="https://chrome.google.com/webstore/detail/mail-merge-with-attachmen/nifmcbjailaccmombpjjpijjbfoicppp">Mail Merge for Gmail</a></li>
+                                            <li>
+                                                <a href="https://chrome.google.com/webstore/detail/email-forwarder/hcfnnagnpmdbaddchgpiojjknjlkeigf">Gmail Forwarder</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://chrome.google.com/webstore/detail/email-scheduler/jnieijnfljjknbiniealpiihfjhmglkn">Gmail Scheduler</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://chrome.google.com/webstore/detail/save-emails-and-attachmen/nflmnfjphdbeagnilbihcodcophecebc">Download Gmail to Google Drive</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://chrome.google.com/webstore/detail/email-notifications-for-f/acknfdkglemcidajjmehljifccmflhkm">Google Forms Email Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li>
+                                                <span class="title">Web Apps</span>
+                                            </li>
+                                            <li><a href="https://ctrlq.org/screenshots/">Web Screenshots</a></li>
+                                            <li><a href="https://ctrlq.org/rss/">RSS Search</a></li>
+                                            <li><a href="https://dictation.io/">Voice Dictation</a></li>
+                                            <li><a href="http://www.labnol.org/internet/amazon-price-tracker/28156/">Amazon Price Tracker</a></li>
+                                            <li><a href="http://talltweets.com/">Tweet Storms for Twitter</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="mailto:amit@labnol.org?Subject=ImageUploader">Email Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="main-container">
+        <section class="image-bg bg-dark xoverlay pt120 pb120">
+            <div class="background-image-holder" style="opacity:.6">
+                <img alt="Background Image" class="background-image" src="https://source.unsplash.com/category/people/800x600">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h2 class="uppercase mb8">Free Image Hosting</h2>
+                        <p class="lead mb40">Upload and host your images on the Internet, forever.</p>
+                        <a class="btn btn-lg btn-white mb40" id="uploadbtn">UPLOAD PICTURE</a>
+                        <div class="dropzone hidden"></div>
+                    </div>
+                  </div>
+                    <div class="row mb-xs-24">
+                        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <div class="googleadsrectangle" style="width:100%">
+                                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3152670624293746" data-ad-slot="2661515976" data-ad-format="rectangle"></ins>
+                            </div>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    
+        <section class="page-title page-title-4 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="uppercase mb0">ctrlq.org</h3>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ol class="breadcrumb breadcrumb-2">
+                            <li>
+                                <a href="/" target="_self">The Developer</a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/labnol" target="_blank">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="https://docs.google.com/forms/d/1gYW-xOxdFOBaRcMmCc9J2ts3S4RfZEv9S_F7jEcdwOc/viewform" target="_blank">Contact Us</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <!--
+    <script src="js/flexslider.min.js"></script>
+    <script src="js/parallax.js"></script>
+  -->
+    <script src="js/scripts.js"></script>
+    <script src="../js/ctrlq.org.google.js"></script>
+    <script src="../js/analytics.js"></script>
+
+</body>
+
+</html>
